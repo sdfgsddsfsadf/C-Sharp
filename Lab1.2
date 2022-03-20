@@ -1,0 +1,32 @@
+using System;
+namespace ConsoleApp1
+{
+public class Program
+    {
+        static public int Example(int d)
+        {
+            double d2 = d % 10;
+            double d1 = (d - (d % 100)) / 100;
+            if (d > 999||d<100)
+            {
+                Console.WriteLine("введене число не є тризначним чилом");
+            }          
+            else
+            {
+                Console.WriteLine("перше число - " + d1.ToString());
+                Console.WriteLine("останнье число - " + d2.ToString());
+            }
+            return d;
+        }
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Введiть тризначне число,щоб дiзнатись перше та останнье число");
+            string S1 = Console.ReadLine();
+            int d = int.Parse(S1);
+            Example(d);
+            Console.ReadLine();
+        }
+    }
+}
+    
